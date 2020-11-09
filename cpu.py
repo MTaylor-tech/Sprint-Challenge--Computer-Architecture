@@ -42,7 +42,8 @@ OPCODES = {
     0b10101101: {OP:"SHR",OANDS:2,TP:1},
     0b10000100: {OP:"ST",OANDS:2,TP:0},
     0b10100001: {OP:"SUB",OANDS:2,TP:1},
-    0b10101011: {OP:"XOR",OANDS:2,TP:1}
+    0b10101011: {OP:"XOR",OANDS:2,TP:1},
+    0b10101110: {OP:"ADDI",OANDS:2,TP:1}
 }
 
 
@@ -236,6 +237,8 @@ class CPU:
         """ALU operations."""
         if op == "ADD":
             self.reg[reg_a] = (self.reg[reg_a]+self.reg[reg_b])&0xFF
+        elif op == "ADDI":
+            self.reg[reg_a] = (self.reg[reg_a]+reg_b)&0xFF
         elif op == "AND":
             self.reg[reg_a] = self.reg[reg_a]&self.reg[reg_b]
         elif op == "CMP":

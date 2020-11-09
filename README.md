@@ -169,6 +169,7 @@ the material you just studied. Time allowing, stretch your limits and see if you
 can deliver on the following optional goals:
 
 - [x] Add the ALU operations: `AND` `OR` `XOR` `NOT` `SHL` `SHR` `MOD`
-- [ ] Add an `ADDI` extension instruction to add an immediate value to a register
+- [x] Add an `ADDI` extension instruction to add an immediate value to a register
+    - implemented with op code: 10101110
 - [x] Add timer interrupts
 - [x] Add keyboard interrupts
